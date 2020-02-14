@@ -1,0 +1,50 @@
+
+<html>
+<head>
+    <title>Guess the Number</title>
+    <link rel="stylesheet" type="text/css" href="./design.css">
+  
+
+</head>
+
+<body>
+    <div id="TP">
+        <h1 id="Title">Guess the Number!</h1>
+    </div>
+
+    <div id="Interface">
+        <p>Guess a number <b>between</b> 1 and 20</p>
+        <input type="text" id="usrGuess">
+        <input type="button" value="Guess!" onclick=Compare()>
+
+        
+
+    </div>
+
+    <script>
+        let randomNumber=Math.floor(Math.random()*20);
+
+        function Compare(){
+            if (document.getElementById("usrGuess").value==""){
+                document.getElementById("usrGuess").value="0";
+            }
+            let usr=parseInt(document.getElementById("usrGuess").value,10);
+            alert(usr);
+            alert(randomNumber);
+            if(usr==randomNumber){
+                alert("Correct");
+            }
+            if (usr<randomNumber){
+                alert("Too Low");
+            }
+            if(usr>randomNumber){
+                alert("Too High");
+            }
+
+        }
+
+
+</script>
+</body>
+
+</html>
